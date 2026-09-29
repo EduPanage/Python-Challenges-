@@ -1,0 +1,16 @@
+{% extends "application.html"%}
+{% block title %}Update - ToDo{% endblock%}
+{% block content %}
+    <div class="container">
+        <h1 class="text-center text-primary">Update Task</h1>
+    </div>
+    <form action="/update/{{task.id}}" class="form-inline" method="POST">
+        <div class="form-group">
+            <label for="description">
+                <input type="text" class="form-control" name="description" id="description" value="{{task.description}}">
+                <button type="submit" class="btn btn-primary">Update</button>
+                <a href="/" class="btn btn-danger">Cancel</a>
+            </label>
+        </div>
+    </form>
+{% endblock %}
